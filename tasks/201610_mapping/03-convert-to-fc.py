@@ -1,0 +1,7 @@
+import arcpy
+
+arcpy.TableToTable_conversion(in_rows=wi+"from_doe/y2017_pre_k_directory_map_data.csv", out_path=wi+"from_doe/y2017_pre_k_directory_map_data.gdb", out_name="y2017_pre_k_directory_map_data")
+
+arcpy.MakeXYEventLayer_management(table=wi+"from_doe/y2017_pre_k_directory_map_data.gdb/y2017_pre_k_directory_map_data", in_x_field="SPCoordX", in_y_field="SPCoordY", out_layer="y2017_pre_k_directory_map_data_layer", spatial_reference="PROJCS['NAD_1983_StatePlane_New_York_Long_Island_FIPS_3104_Feet',GEOGCS['GCS_North_American_1983',DATUM['D_North_American_1983',SPHEROID['GRS_1980',6378137.0,298.257222101]],PRIMEM['Greenwich',0.0],UNIT['Degree',0.0174532925199433]],PROJECTION['Lambert_Conformal_Conic'],PARAMETER['False_Easting',984250.0],PARAMETER['False_Northing',0.0],PARAMETER['Central_Meridian',-74.0],PARAMETER['Standard_Parallel_1',40.66666666666666],PARAMETER['Standard_Parallel_2',41.03333333333333],PARAMETER['Latitude_Of_Origin',40.16666666666666],UNIT['Foot_US',0.3048006096012192]];-120039300 -96540300 3048.00609601219;-100000 10000;-100000 10000;3.28083333333333E-03;.001;.001;IsHighPrecision", in_z_field="")
+
+arcpy.FeatureClassToFeatureClass_conversion(in_features="y2017_pre_k_directory_map_data_layer", out_path=wi+"from_doe/y2017_pre_k_directory_map_data.gdb", out_name="y2017_pre_k_directory_map_data_xy")
