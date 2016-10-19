@@ -59,7 +59,7 @@ print df.head(10)
 
 print len(df.index)
 
-df = df[['LocCode','Borough','District','LocName','phone','address','zip','income','Day_Length','SPCoordX','SPCoordY','PjAreaName','BORONUM','BIN','BBL','DCH_DC_ID','Seats','Contract','InitDate','TotalViol','Inspected','DOHPermit','POINT_X','POINT_Y','WebSite','Email','ORG_TAX_ID','PEPApproved','PKType','Meals','OutdoorIndoor','ExtendedDay','SEMS','Button_type','type','ADMIN_DIST']]
+df = df[['SiteID','type','LocCode','Borough','District','LocName','phone','address','zip','income','Day_Length','SPCoordX','SPCoordY','PjAreaName','BORONUM','BIN','BBL','DCH_DC_ID','Seats','Contract','InitDate','TotalViol','Inspected','DOHPermit','POINT_X','POINT_Y','WebSite','Email','ORG_TAX_ID','PEPApproved','PKType','Meals','OutdoorIndoor','ExtendedDay','SEMS','Button_type','type','ADMIN_DIST']]
 
 print df.head(10)
 for i in df.columns:

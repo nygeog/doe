@@ -9,7 +9,7 @@ def copyanything(src, dst):
         else: raise
 
 incopy = 'C:/GIS/projects/doe/tasks/201610_mapping'
-outcopy = 'W:/Projects/doe/tasks/201610_mapping'
+outcopy = 'Z:/Dropbox/Projects/doe/tasks/201610_mapping'
 theFolderPath = outcopy
 
 print 'try to erase a folder'
@@ -17,6 +17,5 @@ try:
 	shutil.rmtree(theFolderPath)
 except:
 	print 'the folder was already missing'
-
 
 copyanything(incopy, outcopy)
